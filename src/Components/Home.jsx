@@ -54,11 +54,11 @@ function Home() {
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={toggleNavbar}
-                className={`text-white hover:text-gray-300 p-2 focus:outline-none focus:bg-gray-700 ${isOpen ? 'bg-black' : ''}`}
+                className={`text-black hover:text-gray-300 p-2 focus:outline-none focus:bg-gray-700 ${isOpen ? 'bg-black' : ''}`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className={`h-6 w-6 text-black`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -76,7 +76,7 @@ function Home() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden ">
+          <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
               <a href="#" className="text-white block hover:text-gray-300">
                 Home
