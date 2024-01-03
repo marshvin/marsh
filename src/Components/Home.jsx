@@ -1,15 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [navbarBg, setNavbarBg] = useState('bg-transparent');
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 0) {
+        setNavbarBg('bg-white');
+      } else {
+        setNavbarBg('bg-transparent');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="overflow-hidden">
-      <nav className="bg-transparent fixed w-full z-10">
+      <nav className={`fixed w-full z-10 transition-colors duration-300 ${navbarBg}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
@@ -36,7 +54,7 @@ function Home() {
             <div className="-mr-2 flex md:hidden">
               <button
                 onClick={toggleNavbar}
-                className="text-white hover:text-gray-300 p-2 focus:outline-none focus:bg-gray-700"
+                className={`text-white hover:text-gray-300 p-2 focus:outline-none focus:bg-gray-700 ${isOpen ? 'bg-black' : ''}`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +76,8 @@ function Home() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="md:hidden ">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
               <a href="#" className="text-white block hover:text-gray-300">
                 Home
               </a>
