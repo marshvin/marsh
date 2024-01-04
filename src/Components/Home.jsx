@@ -117,7 +117,10 @@ function Home() {
               <b>Full Stack Software Developer</b>. <br />
               I have a strong foundation in computer science principles and a
               proven track record of successfully managing and delivering
-              projects. Throughout my career,
+              projects. I excel at turning complex problems into efficient, scalable, 
+              and user-friendly software applications.
+              I have successfully contributed to notable projects through open-source contributions.
+              Committed to continuous learning, I stay abreast of emerging technologies to ensure my work aligns with industry best practices.
             </p>
             <div className="flex justify-center mt-6 md:justify-start">
               <a
