@@ -82,10 +82,10 @@ function Home() {
                 Home
               </a>
               <a href="#" className="text-white block hover:text-gray-300">
-                About
+                About me
               </a>
               <a href="#" className="text-white block hover:text-gray-300">
-                Services
+                Blogs
               </a>
               <a href="#" className="text-white block hover:text-gray-300">
                 Contact
