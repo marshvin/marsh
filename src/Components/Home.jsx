@@ -105,7 +105,7 @@ function Home() {
             <img
               src="images/IMG_20220517_181301_111.jpg"
               alt="user"
-              className="rounded-full"
+              className="rounded-full max-w-full h-auto"
             />
           </div>
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-10">
@@ -119,7 +119,6 @@ function Home() {
               proven track record of successfully managing and delivering
               projects. I excel at turning complex problems into efficient, scalable, 
               and user-friendly software applications.
-             
             </p>
             <div className="flex justify-center mt-6 md:justify-start">
               <a
