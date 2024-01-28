@@ -22,7 +22,7 @@ const Blog = () => {
               Postgresql
             </h6>
             <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-              How to Store Images in binary
+              How to Store Images in Database
             </h4>
             <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
               Like so many organizations these days, Autodesk is a company in transition. It was until recently a traditional boxed software company selling licenses. Yet its own business model disruption is only part of the story.
