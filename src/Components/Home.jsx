@@ -102,12 +102,14 @@ function Home() {
       >
         <div className="container mx-auto flex flex-col items-center px-6 md:flex-row">
         <div className="sm:w-1/4">
-            <img
-              src="images/IMG_20220517_181301_111.jpg"
-              alt="user"
-              className="rounded-full max-w-full h-auto sm:max-w-xs"
-            />
-          </div>
+      
+  <img
+    src="images/IMG_20220517_181301_111.jpg"
+    alt="user"
+    className="rounded-full max-w-full h-auto w-1/2 sm:w-full"
+  />
+</div>
+
 
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-10">
             <h1 className="text-4xl font-bold text-center md:text-left">
