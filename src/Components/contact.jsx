@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -16,17 +16,17 @@ const Contact = () => {
             <h3 className="text-2xl font-semibold mb-5">My Social Media</h3>
             {/* Social Media Links */}
             <div className="flex flex-col gap-3">
-              <a href="#" className="flex items-center hover:text-white hover:bg-gray-500 p-2">
+              <a href="https://github.com/marshvin" className="flex items-center hover:text-white hover:bg-gray-500 p-2">
                 <FaGithub className="w-6 h-6 m-2" />
                 Github
               </a>
-              <a href="#" className="flex items-center hover:text-white hover:bg-gray-500 p-2">
+              <a href="https://www.linkedin.com/in/vincent-marsh-12b093222/" className="flex items-center hover:text-white hover:bg-gray-500 p-2">
                 <FaLinkedin className="w-6 h-6 m-2" />
                 Linkedin
               </a>
               <a href="#" className="flex items-center hover:text-white hover:bg-gray-500 p-2">
-                <FaYoutube className="w-6 h-6 m-2" />
-                Youtube
+                <FaTwitter className="w-6 h-6 m-2" />
+                Twitter
               </a>
               <a href="#" className="flex items-center hover:text-white hover:bg-gray-500 p-2">
                 <FaFacebook className="w-6 h-6 m-2" />
