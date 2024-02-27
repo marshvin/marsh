@@ -1,0 +1,10 @@
+#particles-js {
+    z-index: 0;
+  }
+  
+  /* Adjust z-index for the button container */
+  #hero .container {
+    position: relative;
+    z-index: 1;
+  }
+  

@@ -7,8 +7,7 @@ function Education() {
   return (
     <section
       id="education"
-      className="bg-gray-100  flex flex-col justify-center items-center"
-    >
+      className="bg-gray-100  flex flex-col justify-center items-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <p className="text-2xl text-gray-500 text-center mb-6">What did I Study ?</p>
         <h2 className="text-3xl text-center font-bold mb-6">
