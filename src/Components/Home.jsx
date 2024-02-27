@@ -172,7 +172,7 @@ function Home() {
           {/* Content */}
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-36">
             <h1 className="text-4xl text-white font-bold text-center md:text-left">
-              Introducing Vincent Marsh <br /><b> A Full Stack Software Developer</b>
+              Introducing <p className="text-red-500">Vincent Marsh</p> <br /><b> A Full Stack Software Developer</b>
             </h1>
             <p className="mt-4 text-white text-center text-darkGrayishBlue md:text-left">
               Programmer  <b>Computer Science</b>  Software Engineer
