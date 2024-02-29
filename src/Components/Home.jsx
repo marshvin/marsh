@@ -166,9 +166,6 @@ function Home() {
     <div class="absolute bottom-0 right-0 w-4 h-4 sm:w-8 sm:h-8 border-2 sm:border-4 border-red-500 transform translate-x-full translate-y-full"></div>
 </div>
 
-
-
-
           {/* Content */}
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-36">
             <h1 className="text-4xl text-white font-bold text-center md:text-left">
