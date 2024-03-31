@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub } from 'react-icons/fa';
+
 const Card = ({ image, title, paragraph, viewLink }) => {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -26,16 +26,7 @@ const Card = ({ image, title, paragraph, viewLink }) => {
     </div>
   );
 };
-const GithubButton = () => {
-  return (
-    <button className="bg-black text-white font-semibold py-2 px-4 rounded-full shadow-md hover:shadow-lg transform hover:scale-110 transition-all duration-300">
-      <svg className="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M9 19c-5 1.5-5-2.5-7-3m14 0c1.5.5 3-1 3-3 0-4-5-4-6-8 2 0 3.5 1.5 4 3l2 1c1.5 0 3 .5 3 3-.5 2.5-2 3.5-3 4z"></path>
-      </svg>
-      See More on GitHub
-    </button>
-  );
-};
+
 const CardList = () => {
   const cards = [
     {
