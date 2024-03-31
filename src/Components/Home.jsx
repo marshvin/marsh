@@ -158,13 +158,13 @@ function Home() {
       <div id="particles-js" className="absolute top-0 left-0 w-full h-full"></div>
 
       <section id="hero" className="bg-black flex flex-col-reverse sm:flex-row items-center px-6" style={{ height: '100vh' }}>
-        <div className="container mx-auto flex flex-col items-center px-6 md:flex-row">
+      <div className="container mx-auto flex flex-col items-center px-6 md:flex-row">
           {/* Image */}
-          <div class="relative sm:w-1/2">
-    <img src="images/me.jpg" alt="user" class="h-full w-full md:mt-8 sm:w-full " />
-    <div class="absolute top-0 left-0 w-4 h-4 sm:w-8 sm:h-8 border-2 sm:border-4 border-red-500 transform -translate-x-full -translate-y-full"></div>
-    <div class="absolute bottom-0 right-0 w-4 h-4 sm:w-8 sm:h-8 border-2 sm:border-4 border-red-500 transform translate-x-full translate-y-full"></div>
-</div>
+          <div className="relative sm:w-1/2">
+          <img src="images/coder1.png" alt="user" class="h-32 w-32 md:h-full md:w-full md:mt-8 sm:w-full border border-red-500 rounded-full" />
+
+          </div>
+
 
           {/* Content */}
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-36">
