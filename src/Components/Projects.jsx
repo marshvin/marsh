@@ -33,7 +33,7 @@ const CardList = () => {
       image: 'images/bnb.jpg',
       title: 'Liftloft',
       paragraph: 'Trained and Deployed a Machine Learning Algorithm for Airbnb Recommendations in Kenya. The recommendation algorithm runs on a webplatfrom',
-      viewLink: 'https://github.com/marshvin/Liftloft',
+      viewLink: 'https://liftloft-89d137ccc2b3.herokuapp.com/',
     },
     {
       image: 'images/cook2.jpg',
