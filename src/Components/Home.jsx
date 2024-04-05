@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Particles from 'particles.js';
-import { FaFileDownload } from 'react-icons/fa';
-
+import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools } from 'react-icons/fa';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [navbarWidth, setNavbarWidth] = useState('w-12');
   const [navbarBg, setNavbarBg] = useState('bg-transparent');
+
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
+    setNavbarWidth(isOpen ? 'w-12' : 'w-28');
   };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -29,7 +32,6 @@ function Home() {
   useEffect(() => {
     window.particlesJS('particles-js', particleConfig);
   }, []);
-  
 
   const particleConfig = {
     particles: {
@@ -87,98 +89,86 @@ function Home() {
     },
     retina_detect: true,
   };
-  
 
   return (
     <div className="relative overflow-hidden">
-   <nav className={`fixed top-0 left-0 right-0 z-10 transition-colors duration-300 ${navbarBg}`}>
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex items-center justify-center h-16"> {/* justify-center to center the navbar */}
-      <div className="hidden md:block">
-        <div className="ml-10 flex items-center space-x-6"> {/* Increased space-x-6 */}
-          <a href="#" className="text-white hover:text-gray-300">
-            Home
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            About me
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            Blogs
-          </a>
-          <a href="#" className="text-white hover:text-gray-300">
-            Contact
-          </a>
+      <nav
+        className={`fixed top-0 left-0 h-full z-10 transition-all duration-300 ${navbarBg} ${navbarWidth}`}
+      >
+        <div className="max-w-xs w-16 mx-auto flex flex-col items-center justify-center h-full">
+        <div className="flex flex-col items-center mt-10 space-y-4">
+            <a href="#" className="flex items-center text-white hover:text-gray-300">
+              {isOpen ? <FaHome className="inline-block mr-2" /> : <FaHome className="inline-block" />}
+              {isOpen && <span>Home</span>}
+            </a>
+          
+            <a href="#" className="flex items-center text-white hover:text-gray-300">
+              {isOpen ? <FaBlog className="inline-block mr-2" /> : <FaBlog className="inline-block" />}
+              {isOpen && <span>Blogs</span>}
+            </a>
+            <a href="#" className="flex items-center text-white hover:text-gray-300">
+              {isOpen ? <FaEnvelope className="inline-block mr-2" /> : <FaEnvelope className="inline-block" />}
+              {isOpen && <span>Contact</span>}
+            </a>
+            <a href="#" className="flex items-center text-white hover:text-gray-300">
+              {isOpen ? <FaProjectDiagram className="inline-block mr-2" /> : <FaProjectDiagram className="inline-block" />}
+              {isOpen && <span>Project</span>}
+            </a>
+            <a href="#" className="flex items-center text-white hover:text-gray-300">
+              {isOpen ? <FaGraduationCap className="inline-block mr-2" /> : <FaGraduationCap className="inline-block" />}
+              {isOpen && <span>Education</span>}
+            </a>
+            <a href="#" className="flex items-center text-white hover:text-gray-300">
+              {isOpen ? <FaTools className="inline-block mr-2" /> : <FaTools className="inline-block" />}
+              {isOpen && <span>Services</span>}
+            </a>
+          </div>
         </div>
-      </div>
-      <div className="-mr-2 flex md:hidden">
-        <button
-          onClick={toggleNavbar}
-          className={`text-white hover:text-gray-300 p-2 focus:outline-none focus:bg-gray-700 ${isOpen ? 'bg-black' : ''}`}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className={`h-6 w-6 text-white`}
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        <div className="absolute bottom-0 w-full flex justify-center">
+          <button
+            onClick={toggleNavbar}
+            className="text-white py-2 focus:outline-none"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  {isOpen && (
-    <div className="md:hidden">
-      <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black">
-        <a href="#" className="text-white block hover:text-gray-300">
-          Home
-        </a>
-        <a href="#" className="text-white block hover:text-gray-300">
-          About me
-        </a>
-        <a href="#" className="text-white block hover:text-gray-300">
-          Blogs
-        </a>
-        <a href="#" className="text-white block hover:text-gray-300">
-          Contact
-        </a>
-      </div>
-    </div>
-  )}
-</nav>
-
+            <FaAngleRight size={24} />
+          </button>
+        </div>
+      </nav>
 
       <div id="particles-js" className="absolute top-0 left-0 w-full h-full"></div>
 
-      <section id="hero" className="bg-black flex flex-col-reverse sm:flex-row items-center px-6" style={{ height: '100vh' }}>
-      <div className="container mx-auto flex flex-col items-center px-6 md:flex-row">
+      <section
+        id="hero"
+        className="bg-black flex flex-col-reverse sm:flex-row items-center px-6"
+        style={{ height: '100vh' }}
+      >
+        <div className="container mx-auto flex flex-col items-center px-6 md:flex-row">
           {/* Image */}
           <div className="relative sm:w-1/2">
-          <img src="images/coder1.png" alt="user" class="h-32 w-32 md:h-full md:w-full md:mt-8 sm:w-full border border-red-500 rounded-full" />
-
+            <img
+              src="images/coder1.png"
+              alt="user"
+              className="h-32 w-32 md:h-full md:w-full md:mt-8 sm:w-full border border-red-500 rounded-full"
+            />
           </div>
-
 
           {/* Content */}
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-36">
             <h1 className="text-4xl text-white font-bold text-center md:text-left">
-              Introducing <p className="text-red-500">Vincent Marsh</p> <br /><b> A Full Stack Software Developer</b>
+              Introducing{' '}
+              <p className="text-red-500">Vincent Marsh</p> <br />
+              <b> A Full Stack Software Developer</b>
             </h1>
             <p className="mt-4 text-white text-center text-darkGrayishBlue md:text-left">
-              Programmer  <b>Computer Science</b>  Software Engineer
+              Programmer <b>Computer Science</b> Software Engineer
             </p>
             <div className="flex justify-center mt-6 md:justify-start space-x-6">
               {/* About Me button */}
-              <a href="#" className="py-2 px-6 text-white bg-red-500  hover:bg-red-600">About Me</a>
-              {/* GitHub button */}
-              
+              <a
+                href="#"
+                className="py-2 px-6 text-white bg-red-500  hover:bg-red-600"
+              >
+                About Me
+              </a>
               {/* Download Resume button */}
               <button className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900">
                 <FaFileDownload className="mr-2" size={24} /> Resume
