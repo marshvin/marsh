@@ -16,7 +16,7 @@ function Education() {
       </h2>
       </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-4">
           {/* Education Card 1 */}
           <div className="flex flex-col justify-center items-center bg-white rounded-lg shadow-md p-6 text-center sm:max-w-xs">
             <FaGraduationCap className="text-4xl text-black-500 mb-4" />
@@ -33,7 +33,7 @@ function Education() {
             <FaBook className="text-4xl text-black-500 mb-4" />
             <h3 className="text-xl font-semibold">Full-Stack Software Engineering</h3>
             <p className="text-gray-600">ALX SE Program</p>
-            <p className="text-gray-600">2022 - 2023</p>
+            <p className="text-gray-600">2022 - 2024</p>
             <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
               Certificate
             </button>

@@ -5,7 +5,7 @@ import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiag
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [navbarWidth, setNavbarWidth] = useState('w-12');
-  const [navbarBg, setNavbarBg] = useState('bg-transparent');
+  const [navbarColor, setNavbarColor] = useState('text-white');
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -16,9 +16,9 @@ function Home() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
-        setNavbarBg('bg-gray-500');
+        setNavbarColor('text-black'); // Change text color to black
       } else {
-        setNavbarBg('bg-transparent');
+        setNavbarColor('text-white'); // Change text color to white
       }
     };
 
@@ -93,32 +93,32 @@ function Home() {
   return (
     <div className="relative overflow-hidden">
       <nav
-        className={`fixed top-0 left-0 h-full z-10 transition-all duration-300 ${navbarBg} ${navbarWidth}`}
+        className={`fixed top-0 left-0 h-full z-10 transition-all duration-300 bg-transparent ${navbarWidth}`}
       >
-        <div className="max-w-xs w-16 mx-auto flex flex-col items-center justify-center h-full">
+        <div className="max-w-xs w-16 mx-auto flex flex-col items-center justify-center h-full mr-4">
         <div className="flex flex-col items-center mt-10 space-y-4">
-            <a href="#" className="flex items-center text-white hover:text-gray-300">
+            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
               {isOpen ? <FaHome className="inline-block mr-2" /> : <FaHome className="inline-block" />}
               {isOpen && <span>Home</span>}
             </a>
           
-            <a href="#" className="flex items-center text-white hover:text-gray-300">
+            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
               {isOpen ? <FaBlog className="inline-block mr-2" /> : <FaBlog className="inline-block" />}
               {isOpen && <span>Blogs</span>}
             </a>
-            <a href="#" className="flex items-center text-white hover:text-gray-300">
+            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
               {isOpen ? <FaEnvelope className="inline-block mr-2" /> : <FaEnvelope className="inline-block" />}
               {isOpen && <span>Contact</span>}
             </a>
-            <a href="#" className="flex items-center text-white hover:text-gray-300">
+            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
               {isOpen ? <FaProjectDiagram className="inline-block mr-2" /> : <FaProjectDiagram className="inline-block" />}
               {isOpen && <span>Project</span>}
             </a>
-            <a href="#" className="flex items-center text-white hover:text-gray-300">
+            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
               {isOpen ? <FaGraduationCap className="inline-block mr-2" /> : <FaGraduationCap className="inline-block" />}
               {isOpen && <span>Education</span>}
             </a>
-            <a href="#" className="flex items-center text-white hover:text-gray-300">
+            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
               {isOpen ? <FaTools className="inline-block mr-2" /> : <FaTools className="inline-block" />}
               {isOpen && <span>Services</span>}
             </a>
@@ -127,7 +127,7 @@ function Home() {
         <div className="absolute bottom-0 w-full flex justify-center">
           <button
             onClick={toggleNavbar}
-            className="text-white py-2 focus:outline-none"
+            className={`text-white py-2 focus:outline-none ${navbarColor}`}
           >
             <FaAngleRight size={24} />
           </button>
