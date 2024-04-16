@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Particles from 'particles.js';
 import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools } from 'react-icons/fa';
+import { Link } from 'react-scroll';
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [navbarWidth, setNavbarWidth] = useState('w-12');
   const [navbarColor, setNavbarColor] = useState('text-white');
+  const [arrowColor, setArrowColor] = useState('text-white');
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -17,8 +19,10 @@ function Home() {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
         setNavbarColor('text-black'); // Change text color to black
+        setArrowColor('text-black'); // Change arrow color to black
       } else {
         setNavbarColor('text-white'); // Change text color to white
+        setArrowColor('text-white'); // Change arrow color to white
       }
     };
 
@@ -96,38 +100,38 @@ function Home() {
         className={`fixed top-0 left-0 h-full z-10 transition-all duration-300 bg-transparent ${navbarWidth}`}
       >
         <div className="max-w-xs w-16 mx-auto flex flex-col items-center justify-center h-full mr-4">
-        <div className="flex flex-col items-center mt-10 space-y-4">
-            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
+          <div className="flex flex-col items-center mt-10 space-y-4">
+            <Link to="hero" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
               {isOpen ? <FaHome className="inline-block mr-2" /> : <FaHome className="inline-block" />}
               {isOpen && <span>Home</span>}
-            </a>
+            </Link>
           
-            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
+            <Link to="blog" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
               {isOpen ? <FaBlog className="inline-block mr-2" /> : <FaBlog className="inline-block" />}
               {isOpen && <span>Blogs</span>}
-            </a>
-            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
+            </Link>
+            <Link to="contact" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
               {isOpen ? <FaEnvelope className="inline-block mr-2" /> : <FaEnvelope className="inline-block" />}
               {isOpen && <span>Contact</span>}
-            </a>
-            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
+            </Link>
+            <Link to="project" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
               {isOpen ? <FaProjectDiagram className="inline-block mr-2" /> : <FaProjectDiagram className="inline-block" />}
               {isOpen && <span>Project</span>}
-            </a>
-            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
+            </Link>
+            <Link to="education" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
               {isOpen ? <FaGraduationCap className="inline-block mr-2" /> : <FaGraduationCap className="inline-block" />}
               {isOpen && <span>Education</span>}
-            </a>
-            <a href="#" className={`flex items-center hover:text-gray-300 ${navbarColor}`}>
+            </Link>
+            <Link to="services" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
               {isOpen ? <FaTools className="inline-block mr-2" /> : <FaTools className="inline-block" />}
               {isOpen && <span>Services</span>}
-            </a>
+            </Link>
           </div>
         </div>
         <div className="absolute bottom-0 w-full flex justify-center">
           <button
             onClick={toggleNavbar}
-            className={`text-white py-2 focus:outline-none ${navbarColor}`}
+            className={`text-white py-2 focus:outline-none ${arrowColor}`}
           >
             <FaAngleRight size={24} />
           </button>

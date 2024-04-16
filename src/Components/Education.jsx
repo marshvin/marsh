@@ -23,7 +23,7 @@ function Education() {
             <h3 className="text-xl font-semibold">Bachelor's Degree in Computer Science</h3>
             <p className="text-gray-600">Kabarak University</p>
             <p className="text-gray-600">2020 - 2024</p>
-            <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
+            <button className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
               Certificate
             </button>
           </div>
@@ -34,7 +34,7 @@ function Education() {
             <h3 className="text-xl font-semibold">Full-Stack Software Engineering</h3>
             <p className="text-gray-600">ALX SE Program</p>
             <p className="text-gray-600">2022 - 2024</p>
-            <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
+            <button className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
               Certificate
             </button>
           </div>
@@ -45,7 +45,7 @@ function Education() {
             <h3 className="text-xl font-semibold">Python for Data Science</h3>
             <p className="text-gray-600">IBM Course</p>
             <p className="text-gray-600">2021 - 2021</p>
-            <button className="mt-4 bg-blue-500 text-white py-2 px-4 rounded">
+            <button className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
               Certificate
             </button>
           </div>

@@ -58,6 +58,10 @@ const CardList = () => {
           <Card key={index} {...card} />
         ))}
       </div>
+      <a href="https://github.com/marshvin"
+    class="animate-bounce focus:animate-none hover:animate-none inline-flex text-md font-medium bg-red-700 mt-3 px-4 py-2 rounded-lg tracking-wide text-white">
+    <span class="ml-2">See more</span>
+</a>
     </div>
   );
 };
