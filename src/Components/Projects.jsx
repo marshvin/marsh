@@ -33,7 +33,7 @@ const CardList = () => {
       image: 'images/bnb.jpg',
       title: 'Liftloft',
       paragraph: 'Trained and Deployed a Machine Learning Algorithm for Airbnb Recommendations in Kenya. The recommendation algorithm runs on a webplatfrom',
-      viewLink: 'https://liftloft-89d137ccc2b3.herokuapp.com/',
+      viewLink: 'https://liftloft.onrender.com/',
     },
     {
       image: 'images/cook2.jpg',
@@ -45,12 +45,12 @@ const CardList = () => {
       image: 'images/ECommerce.jpg',
       title: 'Shoepalace',
       paragraph: 'This is an ecommerce website for selling shoes. It is built ReactJS, Nodejs and Postgresql',
-      viewLink: 'https://github.com/marshvin/Shoepalacet',
+      viewLink: 'https://github.com/marshvin/Shoepalace',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 p-4 flex flex-col items-center">
+    <div id="project" className="min-h-screen bg-gray-100 p-4 flex flex-col items-center">
       <p className="text-2xl text-gray-500 mb-6">What have I done ?</p>
       <h2 className="text-3xl font-bold mb-6">My Projects</h2>
       <div className="flex flex-wrap justify-center">

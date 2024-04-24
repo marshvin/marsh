@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Particles from 'particles.js';
-import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools } from 'react-icons/fa';
+import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools, FaCogs } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 function Home() {
@@ -105,15 +105,6 @@ function Home() {
               {isOpen ? <FaHome className="inline-block mr-2" /> : <FaHome className="inline-block" />}
               {isOpen && <span>Home</span>}
             </Link>
-          
-            <Link to="blog" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaBlog className="inline-block mr-2" /> : <FaBlog className="inline-block" />}
-              {isOpen && <span>Blogs</span>}
-            </Link>
-            <Link to="contact" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaEnvelope className="inline-block mr-2" /> : <FaEnvelope className="inline-block" />}
-              {isOpen && <span>Contact</span>}
-            </Link>
             <Link to="project" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
               {isOpen ? <FaProjectDiagram className="inline-block mr-2" /> : <FaProjectDiagram className="inline-block" />}
               {isOpen && <span>Project</span>}
@@ -126,14 +117,29 @@ function Home() {
               {isOpen ? <FaTools className="inline-block mr-2" /> : <FaTools className="inline-block" />}
               {isOpen && <span>Services</span>}
             </Link>
+            <Link to="skills" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
+              {isOpen ? <FaCogs className="inline-block mr-2" /> : <FaCogs className="inline-block" />}
+              {isOpen && <span>Stack</span>}
+            </Link>
+            <Link to="blogs" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
+              {isOpen ? <FaBlog className="inline-block mr-2" /> : <FaBlog className="inline-block" />}
+              {isOpen && <span>Blogs</span>}
+            </Link>
+            <Link to="contact" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
+              {isOpen ? <FaEnvelope className="inline-block mr-2" /> : <FaEnvelope className="inline-block" />}
+              {isOpen && <span>Contact</span>}
+            </Link>
+            
+            
+           
           </div>
         </div>
         <div className="absolute bottom-0 w-full flex justify-center">
           <button
             onClick={toggleNavbar}
-            className={`text-white py-2 focus:outline-none ${arrowColor}`}
+            className={`text-white py-2 focus:outline-none ${navbarColor}`}
           >
-            <FaAngleRight size={24} />
+            <FaAngleRight size={24} className={arrowColor} />
           </button>
         </div>
       </nav>
@@ -149,7 +155,7 @@ function Home() {
           {/* Image */}
           <div className="relative sm:w-1/2">
             <img
-              src="images/coder1.png"
+              src="images/Passport.png"
               alt="user"
               className="h-32 w-32 md:h-full md:w-full md:mt-8 sm:w-full border border-red-500 rounded-full"
             />
@@ -166,18 +172,24 @@ function Home() {
               Programmer <b>Computer Science</b> Software Engineer
             </p>
             <div className="flex justify-center mt-6 md:justify-start space-x-6">
-              {/* About Me button */}
-              <a
-                href="#"
-                className="py-2 px-6 text-white bg-red-500  hover:bg-red-600"
-              >
-                About Me
-              </a>
-              {/* Download Resume button */}
-              <button className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900">
-                <FaFileDownload className="mr-2" size={24} /> Resume
-              </button>
-            </div>
+       {/* About Me button */}
+  <Link
+    to="project" 
+    smooth={true} 
+    duration={500}
+    className="py-2 px-6 text-white bg-red-500  hover:bg-red-600 cursor-pointer" 
+  >
+    About Me
+  </Link>
+  {/* Download Resume button */}
+  <a
+    href="images/VINCENTRESUME.pdf" 
+    download 
+    className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900"
+  >
+    <FaFileDownload className="mr-2" size={24} /> Resume
+  </a>
+</div>
           </div>
         </div>
       </section>

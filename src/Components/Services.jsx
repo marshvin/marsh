@@ -4,7 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 function Service() {
   return (
-    <div className="mb-4 w-full h-full">
+    <div id="services" className="mb-4 w-full h-full">
       <div className="text-center mt-4">
      <div className="inline-block border-b border-gray-400 w-16 mr-4"></div>
      <h2 className="text-3xl text-gray-600 inline-block sm:text-xl md:text-xl lg:text-3xl xl:text-3xl">What can I offer?</h2>

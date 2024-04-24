@@ -7,7 +7,7 @@ function Skills() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <p className="text-2xl text-gray-500 text-center mb-6">What languages and Frameworks do I use ?</p>
         <h2 className="text-3xl text-center font-bold mb-6">
-          My Skills
+          My Tech Stack
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {/* HTML5 */}
