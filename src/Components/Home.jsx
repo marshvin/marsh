@@ -155,7 +155,7 @@ function Home() {
           {/* Image */}
           <div className="relative sm:w-1/2">
             <img
-              src="images/Passport.png"
+              src="images/school.jpg"
               alt="user"
               className="h-32 w-32 md:h-full md:w-full md:mt-8 sm:w-full border border-red-500 rounded-full"
             />
