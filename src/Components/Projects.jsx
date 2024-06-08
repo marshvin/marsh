@@ -17,7 +17,7 @@ const Card = ({ image, title, paragraph, viewLink }) => {
             <button onClick={toggleDetails} className="text-white font-semibold py-2 px-4 rounded hover:text-red-500 hover:underline transition-colors">
               {showDetails ? 'Hide Details' : 'Learn More'}
             </button>
-            <a href={viewLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold py-2 px-4 rounded border border-red-500 hover:bg-red-500 hover:text-white transition-colors">View</a>
+            <a href={viewLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold py-2 px-4 rounded border border-red-500 hover:bg-red-500 hover:text-white transition-colors">Demo</a>
           </div>
         </div>
         
@@ -45,7 +45,7 @@ const CardList = () => {
       image: 'images/ECommerce.jpg',
       title: 'Shoepalace',
       paragraph: 'This is an ecommerce website for selling shoes. It is built ReactJS, Nodejs and Postgresql',
-      viewLink: 'https://github.com/marshvin/Shoepalace',
+      viewLink: 'https://shoepalace.vercel.app/',
     },
   ];
 
