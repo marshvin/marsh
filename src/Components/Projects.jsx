@@ -50,7 +50,7 @@ const CardList = () => {
   ];
 
   return (
-    <div id="project" className="min-h-screen bg-gray-100 p-4 flex flex-col items-center">
+    <div id="project" className="min-h-screen bg-white p-4 flex flex-col items-center">
       <p className="text-2xl text-gray-500 mb-6">What have I done ?</p>
       <h2 className="text-3xl font-bold mb-6">My Projects</h2>
       <div className="flex flex-wrap justify-center">

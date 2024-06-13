@@ -5,7 +5,7 @@ import { FaCertificate } from 'react-icons/fa';
 
 function Education() {
   return (
-    <section id="education" className="bg-gray-100 py-6">
+    <section id="education" className="bg-white py-6">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
       <div className="inline-block border-b border-gray-400 w-16 mr-4"></div>
