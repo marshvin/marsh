@@ -22,10 +22,7 @@ function Education() {
             <FaGraduationCap className="text-4xl text-black-500 mb-4" />
             <h3 className="text-xl font-semibold">Bachelor's Degree in Computer Science</h3>
             <p className="text-gray-600">Kabarak University</p>
-            <p className="text-gray-600">2020 - 2024</p>
-            <button className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
-              Certificate
-            </button>
+          
           </div>
 
           {/* Education Card 2 */}
@@ -33,21 +30,15 @@ function Education() {
             <FaBook className="text-4xl text-black-500 mb-4" />
             <h3 className="text-xl font-semibold">Full-Stack Software Engineering</h3>
             <p className="text-gray-600">ALX SE Program</p>
-            <p className="text-gray-600">2022 - 2024</p>
-            <button className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
-              Certificate
-            </button>
+            
           </div>
 
           {/* Education Card 3 */}
           <div className="flex flex-col justify-center items-center bg-white rounded-lg shadow-md p-6 text-center sm:max-w-24 mt-4 sm:mt-0">
             <FaCertificate className="text-4xl text-black-500 mb-4" />
-            <h3 className="text-xl font-semibold">Python for Data Science</h3>
-            <p className="text-gray-600">IBM Course</p>
-            <p className="text-gray-600">2021 - 2021</p>
-            <button className="mt-4 bg-red-500 text-white py-2 px-4 rounded">
-              Certificate
-            </button>
+            <h3 className="text-xl font-semibold">Python fundamentals</h3>
+            <p className="text-gray-600">IBM </p>
+            
           </div>
         </div>
       </div>
