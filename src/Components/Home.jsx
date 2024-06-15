@@ -21,8 +21,8 @@ function Home() {
         setNavbarColor('text-black'); // Change text color to black
         setArrowColor('text-black'); // Change arrow color to black
       } else {
-        setNavbarColor('text-white'); // Change text color to white
-        setArrowColor('text-white'); // Change arrow color to white
+        setNavbarColor('text-black'); // Change text color to white
+        setArrowColor('text-black'); // Change arrow color to white
       }
     };
 
@@ -47,7 +47,7 @@ function Home() {
         },
       },
       color: {
-        value: '#ffffff',
+        value: '#000000', // Set particle color to black
       },
       shape: {
         type: 'circle',
@@ -74,7 +74,11 @@ function Home() {
         random: true,
       },
       line_linked: {
-        enable: false,
+        enable: true, // Enable lines between particles
+        distance: 150,
+        color: '#000000',
+        opacity: 0.4,
+        width: 1,
       },
       move: {
         enable: true,
@@ -91,53 +95,89 @@ function Home() {
         },
       },
     },
+    interactivity: {
+      detect_on: 'canvas',
+      events: {
+        onhover: {
+          enable: true,
+          mode: 'repulse', // Change mode to repulse
+        },
+        onclick: {
+          enable: true,
+          mode: 'push',
+        },
+        resize: true,
+      },
+      modes: {
+        grab: {
+          distance: 400,
+          line_linked: {
+            opacity: 1,
+          },
+        },
+        bubble: {
+          distance: 400,
+          size: 40,
+          duration: 2,
+          opacity: 8,
+          speed: 3,
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4,
+        },
+        push: {
+          particles_nb: 4,
+        },
+        remove: {
+          particles_nb: 2,
+        },
+      },
+    },
     retina_detect: true,
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-white">
       <nav
         className={`fixed top-0 left-0 h-full z-10 transition-all duration-300 bg-transparent ${navbarWidth}`}
       >
-        <div className="max-w-xs w-16 mx-auto flex flex-col items-center justify-center h-full mr-4">
+       <div className="max-w-xs w-16 mx-auto flex flex-col items-center justify-center h-full mr-4">
           <div className="flex flex-col items-center mt-10 space-y-4">
             <Link to="hero" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaHome className="inline-block mr-2" /> : <FaHome className="inline-block" />}
-              {isOpen && <span>Home</span>}
+              <FaHome className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Home</span>}
             </Link>
             <Link to="project" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaProjectDiagram className="inline-block mr-2" /> : <FaProjectDiagram className="inline-block" />}
-              {isOpen && <span>Project</span>}
+              <FaProjectDiagram className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Project</span>}
             </Link>
             <Link to="education" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaGraduationCap className="inline-block mr-2" /> : <FaGraduationCap className="inline-block" />}
-              {isOpen && <span>Education</span>}
+              <FaGraduationCap className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Education</span>}
             </Link>
             <Link to="services" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaTools className="inline-block mr-2" /> : <FaTools className="inline-block" />}
-              {isOpen && <span>Services</span>}
+              <FaTools className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Services</span>}
             </Link>
             <Link to="skills" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaCogs className="inline-block mr-2" /> : <FaCogs className="inline-block" />}
-              {isOpen && <span>Stack</span>}
+              <FaCogs className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Stack</span>}
             </Link>
             <Link to="blogs" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaBlog className="inline-block mr-2" /> : <FaBlog className="inline-block" />}
-              {isOpen && <span>Blogs</span>}
+              <FaBlog className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Blogs</span>}
             </Link>
             <Link to="contact" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              {isOpen ? <FaEnvelope className="inline-block mr-2" /> : <FaEnvelope className="inline-block" />}
-              {isOpen && <span>Contact</span>}
+              <FaEnvelope className="inline-block text-2xl sm:text-2xl md:text-3xl lg:text-3xl" />
+              {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Contact</span>}
             </Link>
-            
-            
-           
           </div>
         </div>
         <div className="absolute bottom-0 w-full flex justify-center">
           <button
             onClick={toggleNavbar}
-            className={`text-white py-2 focus:outline-none ${navbarColor}`}
+            className={`py-2 focus:outline-none ${navbarColor}`}
           >
             <FaAngleRight size={24} className={arrowColor} />
           </button>
@@ -148,7 +188,7 @@ function Home() {
 
       <section
         id="hero"
-        className="bg-black flex flex-col-reverse sm:flex-row items-center px-6"
+        className="flex flex-col-reverse sm:flex-row items-center px-6"
         style={{ height: '100vh' }}
       >
         <div className="container mx-auto flex flex-col items-center px-6 md:flex-row">
@@ -163,33 +203,33 @@ function Home() {
 
           {/* Content */}
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-36">
-            <h1 className="text-4xl text-white font-bold text-center md:text-left">
+            <h1 className="text-4xl text-black font-bold text-center md:text-left">
               Introducing{' '}
               <p className="text-red-500">Vincent Marsh</p> <br />
               <b> A Full Stack Software Developer</b>
             </h1>
-            <p className="mt-4 text-white text-center text-darkGrayishBlue md:text-left">
+            <p className="mt-4 text-black text-center md:text-left">
               Programmer <b>Computer Science</b> Software Engineer
             </p>
             <div className="flex justify-center mt-6 md:justify-start space-x-6">
-       {/* About Me button */}
-  <Link
-    to="project" 
-    smooth={true} 
-    duration={500}
-    className="py-2 px-6 text-white bg-red-500  hover:bg-red-600 cursor-pointer" 
-  >
-    About Me
-  </Link>
-  {/* Download Resume button */}
-  <a
-    href="images/VINCENTRESUME.pdf" 
-    download 
-    className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900"
-  >
-    <FaFileDownload className="mr-2" size={24} /> Resume
-  </a>
-</div>
+              {/* About Me button */}
+              <Link
+                to="project"
+                smooth={true}
+                duration={500}
+                className="py-2 px-6 text-white bg-red-500  hover:bg-red-600 cursor-pointer"
+              >
+                About Me
+              </Link>
+              {/* Download Resume button */}
+              <a
+                href="images/VINCENTRESUME.pdf"
+                download
+                className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900"
+              >
+                <FaFileDownload className="mr-2" size={24} /> Resume
+              </a>
+            </div>
           </div>
         </div>
       </section>
