@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Particles from 'particles.js';
-import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools, FaCogs } from 'react-icons/fa';
+import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools, FaCogs, FaGitSquare, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 function Home() {
@@ -100,7 +100,7 @@ function Home() {
       events: {
         onhover: {
           enable: true,
-          mode: 'repulse', // Change mode to repulse
+          mode: 'repulse', 
         },
         onclick: {
           enable: true,
@@ -145,31 +145,31 @@ function Home() {
        <div className="max-w-xs w-16 mx-auto flex flex-col items-center justify-center h-full mr-4">
           <div className="flex flex-col items-center mt-10 space-y-4">
             <Link to="hero" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              <FaHome className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              <FaHome className="inline-block text-2xl sm:text-2xl md:text-2xl lg:text-2xl" />
               {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Home</span>}
             </Link>
             <Link to="project" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              <FaProjectDiagram className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              <FaProjectDiagram className="inline-block text-2xl sm:text-2xl md:text-2xl lg:text-2xl" />
               {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Project</span>}
             </Link>
             <Link to="education" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              <FaGraduationCap className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              <FaGraduationCap className="inline-block text-2xl sm:text-2xl md:text-2xl lg:text-2xl" />
               {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Education</span>}
             </Link>
             <Link to="services" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              <FaTools className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              <FaTools className="inline-block text-2xl sm:text-2xl md:text-2xl lg:text-2xl" />
               {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Services</span>}
             </Link>
             <Link to="skills" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              <FaCogs className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              <FaCogs className="inline-block text-2xl sm:text-2xl md:text-2xl lg:text-2xl" />
               {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Stack</span>}
             </Link>
             <Link to="blogs" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              <FaBlog className="inline-block text-4xl sm:text-3xl md:text-3xl lg:text-3xl" />
+              <FaBlog className="inline-block text-2xl sm:text-2xl md:text-2xl lg:text-2xl" />
               {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Blogs</span>}
             </Link>
             <Link to="contact" smooth={true} duration={500} className={`flex items-center hover:text-gray-300 ${navbarColor}`} style={{ cursor: 'pointer' }}>
-              <FaEnvelope className="inline-block text-2xl sm:text-2xl md:text-3xl lg:text-3xl" />
+              <FaEnvelope className="inline-block text-2xl sm:text-2xl md:text-2xl lg:text-2xl" />
               {isOpen && <span className="text-xl sm:text-lg md:text-2xl lg:text-3xl ml-2">Contact</span>}
             </Link>
           </div>
@@ -227,7 +227,7 @@ function Home() {
                 download
                 className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900"
               >
-                <FaFileDownload className="mr-2" size={24} /> Resume
+                <FaGithub className="mr-2" size={24} /> Github
               </a>
             </div>
           </div>

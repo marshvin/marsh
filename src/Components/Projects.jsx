@@ -17,7 +17,7 @@ const Card = ({ image, title, paragraph, viewLink }) => {
             <button onClick={toggleDetails} className="text-white font-semibold py-2 px-4 rounded hover:text-red-500 hover:underline transition-colors">
               {showDetails ? 'Hide Details' : 'Learn More'}
             </button>
-            <a href={viewLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold py-2 px-4 rounded border border-red-500 hover:bg-red-500 hover:text-white transition-colors">Demo</a>
+            <a href={viewLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold py-2 px-4 rounded border border-red-500 hover:bg-red-500 hover:text-white transition-colors">View</a>
           </div>
         </div>
         
@@ -36,15 +36,15 @@ const CardList = () => {
       viewLink: 'https://liftloft.onrender.com/',
     },
     {
-      image: 'images/cook2.jpg',
-      title: 'DishDelight',
-      paragraph: 'A nice way to pick your next meal for all cooking enthusiasts as this webapp helps you generate meals based on ingredients you have!',
-      viewLink: 'https://github.com/marshvin/DishDelight',
+      image: 'images/tcomp.jpg',
+      title: 'O & M Consultancy',
+      paragraph: 'Looking for tech services for your business, look no further as we provide cutting-edge technology to suit your business',
+      viewLink: 'https://om-consultancy.vercel.app/',
     },
     {
       image: 'images/ECommerce.jpg',
       title: 'Shoepalace',
-      paragraph: 'This is an ecommerce website for selling shoes. It is built ReactJS, Nodejs and Postgresql',
+      paragraph: 'This is an ecommerce website for selling shoes.',
       viewLink: 'https://shoepalace.vercel.app/',
     },
   ];
