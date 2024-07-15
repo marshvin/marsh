@@ -223,7 +223,7 @@ function Home() {
               </Link>
               {/* Download Resume button */}
               <a
-                href="images/VINCENTRESUME.pdf"
+                href="https://github.com/marshvin"
                 download
                 className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900"
               >
