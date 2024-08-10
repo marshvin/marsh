@@ -20,20 +20,20 @@ const Card = ({ image, title, paragraph, viewLink }) => {
             <a href={viewLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold py-2 px-4 rounded border border-red-500 hover:bg-red-500 hover:text-white transition-colors">View</a>
           </div>
         </div>
-        
       </div>
-      
     </div>
   );
 };
 
 const CardList = () => {
+  const [visibleCards, setVisibleCards] = useState(3);
+
   const cards = [
     {
-      image: 'images/bnb.jpg',
-      title: 'Liftloft',
-      paragraph: 'Trained and Deployed a Machine Learning Algorithm for Airbnb Recommendations in Kenya. The recommendation algorithm runs on a webplatfrom',
-      viewLink: 'https://liftloft.onrender.com/',
+      image: 'https://images.unsplash.com/photo-1543702404-38c2035462ad?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D',
+      title: 'CTM',
+      paragraph: 'A website for a church youth ministry',
+      viewLink: 'https://ctmtandaoni.vercel.app/',
     },
     {
       image: 'images/tcomp.jpg',
@@ -44,24 +44,38 @@ const CardList = () => {
     {
       image: 'images/ECommerce.jpg',
       title: 'Shoepalace',
-      paragraph: 'This is an ecommerce website for selling shoes.',
+      paragraph: 'This is an e-commerce website for selling shoes.',
       viewLink: 'https://shoepalace.vercel.app/',
+    },
+    {
+      image: 'images/bnb.jpg',
+      title: 'Liftloft',
+      paragraph: 'Trained and Deployed a Machine Learning Algorithm for Airbnb Recommendations in Kenya. The recommendation algorithm runs on a web platform.',
+      viewLink: 'https://liftloft.onrender.com/',
     },
   ];
 
+  const showMoreCards = () => {
+    setVisibleCards(cards.length);
+  };
+
   return (
     <div id="project" className="min-h-screen bg-white p-4 flex flex-col items-center">
-      <p className="text-2xl text-gray-500 mb-6">What have I done ?</p>
+      <p className="text-2xl text-gray-500 mb-6">What have I done?</p>
       <h2 className="text-3xl font-bold mb-6">My Projects</h2>
       <div className="flex flex-wrap justify-center">
-        {cards.map((card, index) => (
+        {cards.slice(0, visibleCards).map((card, index) => (
           <Card key={index} {...card} />
         ))}
       </div>
-      <a href="https://github.com/marshvin"
-    class="animate-bounce focus:animate-none hover:animate-none inline-flex text-md font-medium bg-red-700 mt-3 px-4 py-2 rounded-lg tracking-wide text-white">
-    <span class="ml-2">See more</span>
-</a>
+      {visibleCards < cards.length && (
+        <button
+          onClick={showMoreCards}
+          className="animate-bounce focus:animate-none hover:animate-none inline-flex text-md font-medium bg-red-700 mt-3 px-4 py-2 rounded-lg tracking-wide text-white"
+        >
+          See more
+        </button>
+      )}
     </div>
   );
 };
