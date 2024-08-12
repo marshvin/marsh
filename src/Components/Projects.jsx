@@ -39,7 +39,7 @@ const CardList = () => {
       image: 'images/tcomp.jpg',
       title: 'O & M Consultancy',
       paragraph: 'Looking for tech services for your business, look no further as we provide cutting-edge technology to suit your business',
-      viewLink: 'https://om-consultancy.vercel.app/',
+      viewLink: 'https://omlabs.vercel.app/',
     },
     {
       image: 'images/ECommerce.jpg',
