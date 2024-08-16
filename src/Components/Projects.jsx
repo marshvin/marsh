@@ -32,7 +32,7 @@ const CardList = () => {
     {
       image: 'https://images.unsplash.com/photo-1543702404-38c2035462ad?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D',
       title: 'CTM',
-      paragraph: 'A website for a church youth ministry',
+      paragraph: 'Christian Tunes Ministry (CtM) is a vibrant youth movement dedicated to preaching the gospel of the Kingdom and hastening the return of our Savior Jesus Christ. ',
       viewLink: 'https://ctmtandaoni.vercel.app/',
     },
     {
@@ -52,6 +52,12 @@ const CardList = () => {
       title: 'Liftloft',
       paragraph: 'Trained and Deployed a Machine Learning Algorithm for Airbnb Recommendations in Kenya. The recommendation algorithm runs on a web platform.',
       viewLink: 'https://liftloft.onrender.com/',
+    },
+    {
+      image: 'images/blog.jpg',
+      title: 'Notebook',
+      paragraph: 'Discover the latest insights and updates from our team. Stay informed and inspired with our curated blog posts.',
+      viewLink: 'https://notebook-six-jade.vercel.app/',
     },
   ];
 

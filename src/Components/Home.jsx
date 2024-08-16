@@ -203,34 +203,36 @@ function Home() {
 
           {/* Content */}
           <div className="flex flex-col mb-12 md:w-1/2 md:ml-36">
-            <h1 className="text-4xl text-black font-bold text-center md:text-left">
-              Introducing{' '}
-              <p className="text-red-500">Vincent Marsh</p> <br />
-              <b> A Full Stack Software Developer</b>
-            </h1>
-            <p className="mt-4 text-black text-center md:text-left">
-              Programmer <b>Computer Science</b> Software Engineer
-            </p>
-            <div className="flex justify-center mt-6 md:justify-start space-x-6">
-              {/* About Me button */}
-              <Link
-                to="project"
-                smooth={true}
-                duration={500}
-                className="py-2 px-6 text-white bg-red-500  hover:bg-red-600 cursor-pointer"
-              >
-                About Me
-              </Link>
-              {/* Download Resume button */}
-              <a
-                href="https://github.com/marshvin"
-                download
-                className="flex items-center py-2 px-6 text-white bg-gray-800  hover:bg-gray-900"
-              >
-                <FaGithub className="mr-2" size={24} /> Github
-              </a>
-            </div>
-          </div>
+  <h1 className="text-4xl text-black font-bold text-center md:text-left">
+    Meet <span className="text-red-500">Vincent Marsh</span>
+    <br />
+    <span className="text-2xl">Full Stack Software Developer</span>
+  </h1>
+  <p className="mt-4 text-black text-center md:text-left">
+    I specialize in building robust, scalable full-stack applications. With expertise in both frontend and backend development, I create seamless user experiences and efficient systems. My work spans web development, database management, and cloud integration.
+  </p>
+  <div className="flex justify-center mt-6 md:justify-start space-x-6">
+    {/* About Me button */}
+    <Link
+      to="project"
+      smooth={true}
+      duration={500}
+      className="py-2 px-6 text-white bg-red-500 hover:bg-red-600 cursor-pointer"
+    >
+      My Work
+    </Link>
+    {/* GitHub button */}
+    <a
+      href="https://github.com/marshvin"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center py-2 px-6 text-white bg-gray-800 hover:bg-gray-900"
+    >
+      <FaGithub className="mr-2" size={24} /> GitHub
+    </a>
+  </div>
+</div>
+
         </div>
       </section>
     </div>
