@@ -18,6 +18,13 @@ const Card = ({ image, title, paragraph, viewLink }) => {
               {showDetails ? 'Hide Details' : 'Learn More'}
             </button>
             <a href={viewLink} target="_blank" rel="noopener noreferrer" className="text-white font-semibold py-2 px-4 rounded border border-red-500 hover:bg-red-500 hover:text-white transition-colors">View</a>
+            <a
+            href="https://github.com/marshvin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center py-2 px-6 text-white bg-gray-800 hover:bg-gray-900">
+            <FaGithub className="mr-2" size={24} /> View Code
+            </a>
           </div>
         </div>
       </div>
