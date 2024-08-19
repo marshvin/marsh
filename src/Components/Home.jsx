@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Particles from 'particles.js';
-import { FaHome, FaBlog, FaEnvelope, FaFileDownload, FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools, FaCogs, FaGitSquare, FaGithub } from 'react-icons/fa';
+import { FaHome, FaBlog, FaEnvelope,  FaAngleRight, FaProjectDiagram, FaGraduationCap, FaTools, FaCogs, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 
 function Home() {
@@ -18,11 +18,11 @@ function Home() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       if (scrollPosition > 0) {
-        setNavbarColor('text-black'); // Change text color to black
-        setArrowColor('text-black'); // Change arrow color to black
+        setNavbarColor('text-black'); 
+        setArrowColor('text-black'); 
       } else {
-        setNavbarColor('text-black'); // Change text color to white
-        setArrowColor('text-black'); // Change arrow color to white
+        setNavbarColor('text-black'); 
+        setArrowColor('text-black'); 
       }
     };
 

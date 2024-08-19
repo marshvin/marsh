@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { FaGithub } from 'react-icons/fa';
 const Card = ({ image, title, paragraph, viewLink }) => {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -22,8 +22,8 @@ const Card = ({ image, title, paragraph, viewLink }) => {
             href="https://github.com/marshvin"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center py-2 px-6 text-white bg-gray-800 hover:bg-gray-900">
-            <FaGithub className="mr-2" size={24} /> View Code
+            className="flex items-center py-2 px-6 text-white hover:bg-gray-900">
+            <FaGithub className="mr-2" size={24} />Code
             </a>
           </div>
         </div>
