@@ -36,11 +36,12 @@ const CardList = () => {
   const [visibleCards, setVisibleCards] = useState(3);
 
   const cards = [
+
     {
-      image: 'https://images.unsplash.com/photo-1543702404-38c2035462ad?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D',
-      title: 'CTM',
-      paragraph: 'Christian Tunes Ministry (CtM) is a vibrant youth movement dedicated to preaching the gospel of the Kingdom and hastening the return of our Savior Jesus Christ. ',
-      viewLink: 'https://ctmtandaoni.vercel.app/',
+      image: 'https://st.depositphotos.com/1000315/3880/i/450/depositphotos_38805947-Multiracial-Young-People-Holding-Hands-in-a-Circle.jpg',
+      title: 'Mental Bridges',
+      paragraph: 'A website for an organization  dedicated  to promoting mental well-being through accessible resources, compassionate support, and community engagement.  ',
+      viewLink: 'https://mental-bridges.vercel.app/',
     },
     {
       image: 'images/tcomp.jpg',
@@ -53,6 +54,12 @@ const CardList = () => {
       title: 'Shoepalace',
       paragraph: 'This is an e-commerce website for selling shoes.',
       viewLink: 'https://shoepalace.vercel.app/',
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1543702404-38c2035462ad?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHByYXllcnxlbnwwfHwwfHx8MA%3D%3D',
+      title: 'CTM',
+      paragraph: 'Christian Tunes Ministry (CtM) is a vibrant youth movement dedicated to preaching the gospel of the Kingdom and hastening the return of our Savior Jesus Christ. ',
+      viewLink: 'https://ctmtandaoni.vercel.app/',
     },
     {
       image: 'images/bnb.jpg',
