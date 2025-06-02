@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail, Download } from 'lucide-react';
@@ -41,13 +40,12 @@ const HeroSection = () => {
           </div>
 
           {/* Right side - Professional image */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="w-80 h-96 bg-gray-200 rounded-2xl border-2 border-dashed border-gray-400 flex items-center justify-center">
-              <div className="text-center text-gray-500">
-                <p className="text-sm font-medium">Add your professional image here</p>
-                <p className="text-xs mt-1">High-quality headshot or professional photo</p>
-              </div>
-            </div>
+          <div className="relative">
+            <img 
+              src="/hackathon.jpg"
+              alt="Professional headshot"
+              className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
+            />
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Award, Trophy, Medal } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -50,14 +49,13 @@ const HackathonsSection = () => {
               Proven track record of innovation and excellence in high-pressure competitive environments
             </p>
             
-            {/* Space for your personal image */}
-            <div className="w-full max-w-md">
-              <div className="aspect-[4/5] bg-gray-200 rounded-xl border-2 border-dashed border-gray-400 flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <p className="text-sm font-medium">Add your personal image here</p>
-                  <p className="text-xs mt-1">Competition photo or professional shot</p>
-                </div>
-              </div>
+            {/* Competition image */}
+            <div className="w-full">
+              <img 
+                src="/hackathon.jpg"
+                alt="Hackathon competition"
+                className="w-full h-[400px] object-cover rounded-xl shadow-lg"
+              />
             </div>
           </div>
 
