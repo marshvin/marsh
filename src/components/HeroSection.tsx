@@ -8,8 +8,17 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Text content */}
-          <div>
+          {/* Image - Now first on mobile */}
+          <div className="order-first lg:order-last">
+            <img 
+              src="/hackathon.jpg"
+              alt="Professional headshot"
+              className="w-full h-[600px] lg:h-[700px] object-cover rounded-2xl shadow-lg"
+            />
+          </div>
+
+          {/* Text content - Now second on mobile */}
+          <div className="order-last lg:order-first">
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
               Full-Stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-900">Developer</span>
             </h1>
@@ -30,22 +39,35 @@ const HeroSection = () => {
               </Button>
             </div>
             <div className="flex gap-4">
-              <Button size="icon" variant="ghost">
-                <Github className="h-6 w-6" />
+              <Button 
+                size="icon" 
+                variant="ghost"
+                asChild
+              >
+                <a 
+                  href="https://github.com/marshvin" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-900"
+                >
+                  <Github className="h-6 w-6" />
+                </a>
               </Button>
-              <Button size="icon" variant="ghost">
-                <Linkedin className="h-6 w-6" />
+              <Button 
+                size="icon" 
+                variant="ghost"
+                asChild
+              >
+                <a 
+                  href="https://www.linkedin.com/in/vincent-marsh-12b093222/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-900"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
               </Button>
             </div>
-          </div>
-
-          {/* Right side - Professional image */}
-          <div className="relative">
-            <img 
-              src="/hackathon.jpg"
-              alt="Professional headshot"
-              className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
-            />
           </div>
         </div>
       </div>
