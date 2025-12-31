@@ -25,16 +25,7 @@ const EducationSection = () => {
                   Academic excellence combined with practical application through multiple projects 
                   and research initiatives in modern software development practices.
                 </p>
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-gray-900">3.8</div>
-                    <div className="text-gray-600">GPA</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-gray-900">5</div>
-                    <div className="text-gray-600">Academic Awards</div>
-                  </div>
-                </div>
+               
               </div>
               
               <div className="bg-gray-50 p-8 rounded-xl border border-gray-200">

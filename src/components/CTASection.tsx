@@ -30,7 +30,7 @@ const CTASection = () => {
         </div>
         
         <div className="text-gray-400">
-          <p>📧 vincent.marsh@example.com</p>
+          <p>📧 vincentmarsh01@gmail.com</p>
           <p>🌐 Available for freelance and full-time opportunities</p>
         </div>
       </div>

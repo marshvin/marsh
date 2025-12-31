@@ -45,7 +45,7 @@ const ContactModal = ({ children }: ContactModalProps) => {
     const body = encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
-    const mailtoLink = `mailto:vincent.marsh@example.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:vincentmarsh01@gmail.com?subject=${subject}&body=${body}`;
     
     // Open email client
     window.location.href = mailtoLink;
